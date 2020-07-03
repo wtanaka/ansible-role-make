@@ -2,106 +2,6 @@
 # DO NOT EDIT
 version: 2
 jobs:
-  ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=centos:7:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=centos:7
-        sh
-  ANSIBLE_VERSIONS=1.4.4 DOCKER_IMAGES=centos:7:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.4.4 DOCKER_IMAGES=centos:7
-        sh
-  ANSIBLE_VERSIONS=1.5.4 DOCKER_IMAGES=centos:7:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.5.4 DOCKER_IMAGES=centos:7
-        sh
-  ANSIBLE_VERSIONS=1.6.1 DOCKER_IMAGES=centos:7:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.6.1 DOCKER_IMAGES=centos:7
-        sh
-  ANSIBLE_VERSIONS=1.7.2 DOCKER_IMAGES=centos:7:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.7.2 DOCKER_IMAGES=centos:7
-        sh
-  ANSIBLE_VERSIONS=1.8.4 DOCKER_IMAGES=centos:7:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.8.4 DOCKER_IMAGES=centos:7
-        sh
-  ANSIBLE_VERSIONS=1.9.2 DOCKER_IMAGES=centos:7:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.9.2 DOCKER_IMAGES=centos:7
-        sh
-  ANSIBLE_VERSIONS=2.0.0.2 DOCKER_IMAGES=centos:7:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.0.0.2 DOCKER_IMAGES=centos:7
-        sh
-  ANSIBLE_VERSIONS=2.1.0.0 DOCKER_IMAGES=centos:7:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.1.0.0 DOCKER_IMAGES=centos:7
-        sh
-  ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=centos:7:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=centos:7
-        sh
   ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=debian:8:
     machine: true
     steps:
@@ -202,7 +102,7 @@ jobs:
     - run: sudo apt-get install -y docker.io
     - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=debian:8
         sh
-  ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=fedora:25:
+  ANSIBLE_VERSIONS=2.5.1 DOCKER_IMAGES=debian:8:
     machine: true
     steps:
     - checkout
@@ -210,9 +110,9 @@ jobs:
     - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
     - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
     - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=fedora:25
+    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.5.1 DOCKER_IMAGES=debian:8
         sh
-  ANSIBLE_VERSIONS=1.4.4 DOCKER_IMAGES=fedora:25:
+  ANSIBLE_VERSIONS=2.6.5 DOCKER_IMAGES=debian:8:
     machine: true
     steps:
     - checkout
@@ -220,9 +120,9 @@ jobs:
     - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
     - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
     - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.4.4 DOCKER_IMAGES=fedora:25
+    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.6.5 DOCKER_IMAGES=debian:8
         sh
-  ANSIBLE_VERSIONS=1.5.4 DOCKER_IMAGES=fedora:25:
+  ANSIBLE_VERSIONS=2.7.8 DOCKER_IMAGES=debian:8:
     machine: true
     steps:
     - checkout
@@ -230,9 +130,9 @@ jobs:
     - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
     - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
     - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.5.4 DOCKER_IMAGES=fedora:25
+    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.7.8 DOCKER_IMAGES=debian:8
         sh
-  ANSIBLE_VERSIONS=1.6.1 DOCKER_IMAGES=fedora:25:
+  ANSIBLE_VERSIONS=2.8.3 DOCKER_IMAGES=debian:8:
     machine: true
     steps:
     - checkout
@@ -240,67 +140,7 @@ jobs:
     - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
     - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
     - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.6.1 DOCKER_IMAGES=fedora:25
-        sh
-  ANSIBLE_VERSIONS=1.7.2 DOCKER_IMAGES=fedora:25:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.7.2 DOCKER_IMAGES=fedora:25
-        sh
-  ANSIBLE_VERSIONS=1.8.4 DOCKER_IMAGES=fedora:25:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.8.4 DOCKER_IMAGES=fedora:25
-        sh
-  ANSIBLE_VERSIONS=1.9.2 DOCKER_IMAGES=fedora:25:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.9.2 DOCKER_IMAGES=fedora:25
-        sh
-  ANSIBLE_VERSIONS=2.0.0.2 DOCKER_IMAGES=fedora:25:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.0.0.2 DOCKER_IMAGES=fedora:25
-        sh
-  ANSIBLE_VERSIONS=2.1.0.0 DOCKER_IMAGES=fedora:25:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.1.0.0 DOCKER_IMAGES=fedora:25
-        sh
-  ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=fedora:25:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=fedora:25
+    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.8.3 DOCKER_IMAGES=debian:8
         sh
   ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=fedora:26:
     machine: true
@@ -402,7 +242,7 @@ jobs:
     - run: sudo apt-get install -y docker.io
     - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=fedora:26
         sh
-  ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=ubuntu:12.04:
+  ANSIBLE_VERSIONS=2.5.1 DOCKER_IMAGES=fedora:26:
     machine: true
     steps:
     - checkout
@@ -410,9 +250,9 @@ jobs:
     - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
     - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
     - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=ubuntu:12.04
+    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.5.1 DOCKER_IMAGES=fedora:26
         sh
-  ANSIBLE_VERSIONS=1.4.4 DOCKER_IMAGES=ubuntu:12.04:
+  ANSIBLE_VERSIONS=2.6.5 DOCKER_IMAGES=fedora:26:
     machine: true
     steps:
     - checkout
@@ -420,9 +260,9 @@ jobs:
     - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
     - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
     - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.4.4 DOCKER_IMAGES=ubuntu:12.04
+    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.6.5 DOCKER_IMAGES=fedora:26
         sh
-  ANSIBLE_VERSIONS=1.5.4 DOCKER_IMAGES=ubuntu:12.04:
+  ANSIBLE_VERSIONS=2.7.8 DOCKER_IMAGES=fedora:26:
     machine: true
     steps:
     - checkout
@@ -430,9 +270,9 @@ jobs:
     - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
     - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
     - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.5.4 DOCKER_IMAGES=ubuntu:12.04
+    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.7.8 DOCKER_IMAGES=fedora:26
         sh
-  ANSIBLE_VERSIONS=1.6.1 DOCKER_IMAGES=ubuntu:12.04:
+  ANSIBLE_VERSIONS=2.8.3 DOCKER_IMAGES=fedora:26:
     machine: true
     steps:
     - checkout
@@ -440,67 +280,7 @@ jobs:
     - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
     - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
     - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.6.1 DOCKER_IMAGES=ubuntu:12.04
-        sh
-  ANSIBLE_VERSIONS=1.7.2 DOCKER_IMAGES=ubuntu:12.04:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.7.2 DOCKER_IMAGES=ubuntu:12.04
-        sh
-  ANSIBLE_VERSIONS=1.8.4 DOCKER_IMAGES=ubuntu:12.04:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.8.4 DOCKER_IMAGES=ubuntu:12.04
-        sh
-  ANSIBLE_VERSIONS=1.9.2 DOCKER_IMAGES=ubuntu:12.04:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=1.9.2 DOCKER_IMAGES=ubuntu:12.04
-        sh
-  ANSIBLE_VERSIONS=2.0.0.2 DOCKER_IMAGES=ubuntu:12.04:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.0.0.2 DOCKER_IMAGES=ubuntu:12.04
-        sh
-  ANSIBLE_VERSIONS=2.1.0.0 DOCKER_IMAGES=ubuntu:12.04:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.1.0.0 DOCKER_IMAGES=ubuntu:12.04
-        sh
-  ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=ubuntu:12.04:
-    machine: true
-    steps:
-    - checkout
-    - run: sudo apt-get update -qq
-    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
-    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
-    - run: sudo apt-get install -y docker.io
-    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=ubuntu:12.04
+    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.8.3 DOCKER_IMAGES=fedora:26
         sh
   ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=ubuntu:16.04:
     machine: true
@@ -602,20 +382,50 @@ jobs:
     - run: sudo apt-get install -y docker.io
     - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=ubuntu:16.04
         sh
+  ANSIBLE_VERSIONS=2.5.1 DOCKER_IMAGES=ubuntu:16.04:
+    machine: true
+    steps:
+    - checkout
+    - run: sudo apt-get update -qq
+    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
+    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
+    - run: sudo apt-get install -y docker.io
+    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.5.1 DOCKER_IMAGES=ubuntu:16.04
+        sh
+  ANSIBLE_VERSIONS=2.6.5 DOCKER_IMAGES=ubuntu:16.04:
+    machine: true
+    steps:
+    - checkout
+    - run: sudo apt-get update -qq
+    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
+    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
+    - run: sudo apt-get install -y docker.io
+    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.6.5 DOCKER_IMAGES=ubuntu:16.04
+        sh
+  ANSIBLE_VERSIONS=2.7.8 DOCKER_IMAGES=ubuntu:16.04:
+    machine: true
+    steps:
+    - checkout
+    - run: sudo apt-get update -qq
+    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
+    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
+    - run: sudo apt-get install -y docker.io
+    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.7.8 DOCKER_IMAGES=ubuntu:16.04
+        sh
+  ANSIBLE_VERSIONS=2.8.3 DOCKER_IMAGES=ubuntu:16.04:
+    machine: true
+    steps:
+    - checkout
+    - run: sudo apt-get update -qq
+    - run: sudo apt-get install -y wget make ruby-bundler python-virtualenv
+    - run: sudo apt-get install -y python-dev libffi-dev libssl-dev
+    - run: sudo apt-get install -y docker.io
+    - run: wget -qO- bit.ly/ansibletest | env ANSIBLE_VERSIONS=2.8.3 DOCKER_IMAGES=ubuntu:16.04
+        sh
 workflows:
   version: 2
   test:
     jobs:
-    - ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=centos:7
-    - ANSIBLE_VERSIONS=1.4.4 DOCKER_IMAGES=centos:7
-    - ANSIBLE_VERSIONS=1.5.4 DOCKER_IMAGES=centos:7
-    - ANSIBLE_VERSIONS=1.6.1 DOCKER_IMAGES=centos:7
-    - ANSIBLE_VERSIONS=1.7.2 DOCKER_IMAGES=centos:7
-    - ANSIBLE_VERSIONS=1.8.4 DOCKER_IMAGES=centos:7
-    - ANSIBLE_VERSIONS=1.9.2 DOCKER_IMAGES=centos:7
-    - ANSIBLE_VERSIONS=2.0.0.2 DOCKER_IMAGES=centos:7
-    - ANSIBLE_VERSIONS=2.1.0.0 DOCKER_IMAGES=centos:7
-    - ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=centos:7
     - ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=debian:8
     - ANSIBLE_VERSIONS=1.4.4 DOCKER_IMAGES=debian:8
     - ANSIBLE_VERSIONS=1.5.4 DOCKER_IMAGES=debian:8
@@ -626,16 +436,10 @@ workflows:
     - ANSIBLE_VERSIONS=2.0.0.2 DOCKER_IMAGES=debian:8
     - ANSIBLE_VERSIONS=2.1.0.0 DOCKER_IMAGES=debian:8
     - ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=debian:8
-    - ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=fedora:25
-    - ANSIBLE_VERSIONS=1.4.4 DOCKER_IMAGES=fedora:25
-    - ANSIBLE_VERSIONS=1.5.4 DOCKER_IMAGES=fedora:25
-    - ANSIBLE_VERSIONS=1.6.1 DOCKER_IMAGES=fedora:25
-    - ANSIBLE_VERSIONS=1.7.2 DOCKER_IMAGES=fedora:25
-    - ANSIBLE_VERSIONS=1.8.4 DOCKER_IMAGES=fedora:25
-    - ANSIBLE_VERSIONS=1.9.2 DOCKER_IMAGES=fedora:25
-    - ANSIBLE_VERSIONS=2.0.0.2 DOCKER_IMAGES=fedora:25
-    - ANSIBLE_VERSIONS=2.1.0.0 DOCKER_IMAGES=fedora:25
-    - ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=fedora:25
+    - ANSIBLE_VERSIONS=2.5.1 DOCKER_IMAGES=debian:8
+    - ANSIBLE_VERSIONS=2.6.5 DOCKER_IMAGES=debian:8
+    - ANSIBLE_VERSIONS=2.7.8 DOCKER_IMAGES=debian:8
+    - ANSIBLE_VERSIONS=2.8.3 DOCKER_IMAGES=debian:8
     - ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=fedora:26
     - ANSIBLE_VERSIONS=1.4.4 DOCKER_IMAGES=fedora:26
     - ANSIBLE_VERSIONS=1.5.4 DOCKER_IMAGES=fedora:26
@@ -646,16 +450,10 @@ workflows:
     - ANSIBLE_VERSIONS=2.0.0.2 DOCKER_IMAGES=fedora:26
     - ANSIBLE_VERSIONS=2.1.0.0 DOCKER_IMAGES=fedora:26
     - ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=fedora:26
-    - ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=ubuntu:12.04
-    - ANSIBLE_VERSIONS=1.4.4 DOCKER_IMAGES=ubuntu:12.04
-    - ANSIBLE_VERSIONS=1.5.4 DOCKER_IMAGES=ubuntu:12.04
-    - ANSIBLE_VERSIONS=1.6.1 DOCKER_IMAGES=ubuntu:12.04
-    - ANSIBLE_VERSIONS=1.7.2 DOCKER_IMAGES=ubuntu:12.04
-    - ANSIBLE_VERSIONS=1.8.4 DOCKER_IMAGES=ubuntu:12.04
-    - ANSIBLE_VERSIONS=1.9.2 DOCKER_IMAGES=ubuntu:12.04
-    - ANSIBLE_VERSIONS=2.0.0.2 DOCKER_IMAGES=ubuntu:12.04
-    - ANSIBLE_VERSIONS=2.1.0.0 DOCKER_IMAGES=ubuntu:12.04
-    - ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=ubuntu:12.04
+    - ANSIBLE_VERSIONS=2.5.1 DOCKER_IMAGES=fedora:26
+    - ANSIBLE_VERSIONS=2.6.5 DOCKER_IMAGES=fedora:26
+    - ANSIBLE_VERSIONS=2.7.8 DOCKER_IMAGES=fedora:26
+    - ANSIBLE_VERSIONS=2.8.3 DOCKER_IMAGES=fedora:26
     - ANSIBLE_VERSIONS=1.4 DOCKER_IMAGES=ubuntu:16.04
     - ANSIBLE_VERSIONS=1.4.4 DOCKER_IMAGES=ubuntu:16.04
     - ANSIBLE_VERSIONS=1.5.4 DOCKER_IMAGES=ubuntu:16.04
@@ -666,3 +464,7 @@ workflows:
     - ANSIBLE_VERSIONS=2.0.0.2 DOCKER_IMAGES=ubuntu:16.04
     - ANSIBLE_VERSIONS=2.1.0.0 DOCKER_IMAGES=ubuntu:16.04
     - ANSIBLE_VERSIONS=2.2.1.0 DOCKER_IMAGES=ubuntu:16.04
+    - ANSIBLE_VERSIONS=2.5.1 DOCKER_IMAGES=ubuntu:16.04
+    - ANSIBLE_VERSIONS=2.6.5 DOCKER_IMAGES=ubuntu:16.04
+    - ANSIBLE_VERSIONS=2.7.8 DOCKER_IMAGES=ubuntu:16.04
+    - ANSIBLE_VERSIONS=2.8.3 DOCKER_IMAGES=ubuntu:16.04
